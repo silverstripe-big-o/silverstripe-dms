@@ -930,9 +930,7 @@ class DMSDocument_Controller extends Controller {
 				if( $content ) {
 					$linkText = sprintf('<a href="%s">%s</a>', $document->Link(), $parser->parse($content));
 				} else {
-					$extension = $document->getExtension();
-					$size = "data:{size:'{$document->getFileSizeFormatted()}'}";
-					$linkText = $document->getLink()."\" class=\"$size documentLink $extension";
+					$linkText = $document->getLink();
 				}
 			}
 		}
